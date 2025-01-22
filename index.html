@@ -28,138 +28,17 @@
     </header>
 
     <section id="about" class="section-container">
-    <div class="container">
-        <h2 class="section-title">About Us</h2>
-        <p>Welcome to Anas Ali Trading, where we help you maximize your profits in the dynamic world of forex trading. Our team of experienced traders, with years of expertise in global financial markets, is dedicated to providing you with cutting-edge strategies, real-time data, and personalized support to help you make smarter investment decisions.</p>
-        <p>At Anas Ali Trading, we believe in empowering our clients with the knowledge and tools they need to succeed. Our unique approach focuses on data-driven insights, effective risk management, and exclusive market trends. Whether you're a beginner or an experienced trader, we offer tailored solutions to suit your individual trading style and goals.</p>
-        <p>Over the years, we've helped countless clients achieve consistent growth in their portfolios. With the use of advanced trading platforms and a strong commitment to integrity and transparency, we are proud to be your trusted partner in the forex market.</p>
-        <p>Join us today to start your journey towards financial success, and let us guide you to make smarter trading decisions. Start with our exclusive membership plans, and access personalized trading strategies that suit your needs.</p>
-    </div>
-</section>
-
-
-    <section id="features" class="section-container">
         <div class="container">
-            <h2 class="section-title">Features</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <h3>Secure Investments</h3>
-                    <p>Invest through Trust Wallet with confidence.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Live Forex Candle Charts</h3>
-                    <p>Analyze market trends with real-time charts.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Portfolio & Profits</h3>
-                    <p>View your growth through detailed reports and screenshots.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Membership Plans</h3>
-                    <p>Access personalized trading strategies through membership.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="charts" class="section-container">
-        <div class="container">
-            <h2 class="section-title">Live Forex Candle Chart</h2>
-            <canvas id="forexChart" width="400" height="200"></canvas>
-        </div>
-        <script>
-            const ctx = document.getElementById('forexChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-                    datasets: [{
-                        label: 'Profit Trend',
-                        data: [120, 190, 300, 500, 200, 300],
-                        borderColor: 'rgba(0, 204, 255, 1)',
-                        borderWidth: 3,
-                        pointBackgroundColor: 'rgba(0, 204, 255, 1)', 
-                        pointRadius: 6,
-                        fill: true,
-                        backgroundColor: 'rgba(0, 204, 255, 0.2)',
-                        tension: 0.4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            grid: {
-                                color: 'rgba(200, 200, 200, 0.2)',
-                            },
-                        },
-                        x: {
-                            grid: {
-                                color: 'rgba(200, 200, 200, 0.2)',
-                            },
-                        },
-                    }
-                }
-            });
-        </script>
-    </section>
-
-    <section id="profits" class="section-container">
-        <div class="container">
-            <h2 class="section-title">Recent Profits</h2>
-            <div class="gallery">
-                <img src="screenshot1.jpg" alt="Profit Screenshot 1">
-                <img src="screenshot2.jpg" alt="Profit Screenshot 2">
-                <img src="screenshot3.jpg" alt="Profit Screenshot 3">
-            </div>
-        </div>
-    </section>
-
-    <section id="membership" class="section-container">
-        <div class="container">
-            <h2 class="section-title">Membership Plans</h2>
-            <div class="plans">
-                <div class="plan">
-                    <h3>Basic</h3>
-                    <p>Access to daily forex updates and charts.</p>
-                    <p>Price: $50/month</p>
-                </div>
-                <div class="plan">
-                    <h3>Pro</h3>
-                    <p>Includes Basic features + one-on-one consultation.</p>
-                    <p>Price: $100/month</p>
-                </div>
-                <div class="plan">
-                    <h3>Premium</h3>
-                    <p>All features + personalized trading strategies.</p>
-                    <p>Price: $200/month</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section-container">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="cta-btn">Submit</button>
-            </form>
+            <h2 class="section-title">About Us</h2>
+            <p>Welcome to Anas Ali Trading, where we help you maximize your profits in the dynamic world of forex trading. Our team of experienced traders, with years of expertise in global financial markets, is dedicated to providing you with cutting-edge strategies, real-time data, and personalized support to help you make smarter investment decisions.</p>
+            <p>At Anas Ali Trading, we believe in empowering our clients with the knowledge and tools they need to succeed. Our unique approach focuses on data-driven insights, effective risk management, and exclusive market trends.</p>
+            <p>Whether you're a beginner or an experienced trader, we offer tailored solutions to suit your individual trading style and goals.</p>
         </div>
     </section>
 
     <footer>
         <div class="footer-container">
             <p>&copy; 2025 Anas Ali Trading. All rights reserved.</p>
-            <p>Visit us at: <a href="https://anasalipanel.com">anasalipanel.com</a></p>
-            <p>Follow us on: 
-                <a href="#">Twitter</a> | 
-                <a href="#">LinkedIn</a> | 
-                <a href="#">Instagram</a>
-            </p>
         </div>
     </footer>
 </body>

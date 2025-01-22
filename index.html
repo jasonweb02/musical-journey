@@ -60,11 +60,42 @@
                         label: 'Profit Trend',
                         data: [120, 190, 300, 500, 200, 300],
                         borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 2
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Highlight points
+                        pointRadius: 5,
+                        tension: 0.4, // Smoother line curves
+                        fill: true,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)', // Gradient fill
                     }]
                 },
                 options: {
                     responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(200, 200, 200, 0.2)', // Light grid lines for better visuals
+                            },
+                            ticks: {
+                                color: '#333', // Ticks color
+                            },
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(200, 200, 200, 0.2)', // Light grid lines
+                            },
+                            ticks: {
+                                color: '#333', // Ticks color
+                            },
+                        },
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#333', // Legend text color
+                            }
+                        }
+                    }
                 }
             });
         </script>

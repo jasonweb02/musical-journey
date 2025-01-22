@@ -24,9 +24,27 @@ header {
 }
 
 /* Style for header image */
-.header-image {
+.header-image, .banner-image {
     width: 100%;   /* Makes the image fill the width of the screen */
     height: auto;  /* Keeps the aspect ratio of the image */
+    opacity: 0.5;  /* Reduce the opacity to make the image less visible */
+    object-fit: cover; /* Ensures the image covers the area */
+    position: relative;
+}
+
+/* Specific header banner image styling */
+#banner {
+    height: 250px; /* Adjust the height of the banner */
+    overflow: hidden; /* Hide the part of the image outside the banner */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Align the image to cover the banner space */
+.banner-image {
+    object-position: center center; /* Ensure it is aligned to the center */
 }
 
 /* Header container styles */

@@ -1,56 +1,65 @@
 /* Importing stylish font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
 /* General body styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Header styling */
-header h1 {
-    font-family: 'Poppins', sans-serif; /* Apply the stylish font */
-    font-size: 60px; /* Make the font large */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 255, 255, 0.2); /* 3D effect */
-    color: #3498db; /* Stylish color */
-    font-weight: bold; /* Make it bold */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 3px; /* Space out letters */
-    margin: 20px 0; /* Adjust margin */
-    text-align: center; /* Center align the header */
+header {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    padding: 40px 0;
+    text-align: center;
 }
 
-/* Header container and navigation styling */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+header h1 {
+    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    font-size: 80px; /* Large font size */
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+    margin: 0;
+}
+
+header nav {
+    margin-top: 20px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
 
 header nav ul li {
-    margin-right: 20px;
+    margin: 0 25px;
 }
 
 header nav ul li a {
-    color: white;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
     text-decoration: none;
-    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
 }
 
 header nav ul li a:hover {
+    background-color: #fff;
     color: #3498db;
+    border-radius: 25px;
 }
 
 /* Section Styling */
@@ -60,13 +69,41 @@ section {
 }
 
 section h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
+    color: #333;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 section p {
     font-size: 18px;
     color: #555;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section ul li::before {
+    content: '✔';
+    color: #2ecc71;
+    margin-right: 10px;
+    font-size: 24px;
 }
 
 /* Gallery for profit screenshots */
@@ -74,77 +111,73 @@ section p {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 40px;
 }
 
 .gallery img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
 /* Membership Plans Section */
 .plans {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .plan {
     background-color: #fff;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 250px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
 }
 
 .plan h3 {
-    font-size: 28px;
+    font-size: 32px;
+    color: #333;
     margin-bottom: 20px;
 }
 
 .plan p {
     font-size: 18px;
     color: #555;
+    margin-bottom: 15px;
 }
 
 .plan p.price {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     color: #3498db;
+    margin-top: 10px;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-footer a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #fff;
-}
-
-/* Form Styling */
-form input, form textarea, form button {
-    padding: 10px;
+/* Contact Form Styling */
+form input,
+form textarea,
+form button {
+    padding: 12px 20px;
     font-size: 16px;
     margin-bottom: 20px;
     width: 100%;
     max-width: 500px;
+    border-radius: 8px;
     border: 1px solid #ddd;
-    border-radius: 5px;
 }
 
 form button {
@@ -152,8 +185,34 @@ form button {
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
     background-color: #2980b9;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Add a slight shadow effect to the footer */
+footer p {
+    margin: 5px 0;
+    letter-spacing: 1px;
 }

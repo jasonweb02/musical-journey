@@ -1,0 +1,155 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #002244;
+    color: #fff;
+    padding: 20px 10%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Container for Sections */
+.container {
+    padding: 20px 10%;
+}
+
+/* Section Titles */
+h2 {
+    color: #002244;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Features Section */
+ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+/* Plan Styles */
+.plans {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    border: 2px solid #002244;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffd700;
+    color: #002244;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+form input, form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #002244;
+    color: #ffd700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ffd700;
+    color: #002244;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #002244;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Gallery for Recent Profits */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .plans {
+        flex-direction: column;
+    }
+
+    .plan {
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas Ali Trading</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Anas Ali Trading</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#charts">Charts</a></li>
+                    <li><a href="#profits">Profits</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Anas Ali Trading, we help clients maximize their profits in the forex market. With expert strategies and proven methods, you can achieve consistent growth. Join us today to start trading smarter!</p>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <ul>
+                <li>Secure investments via Trust Wallet</li>
+                <li>Live forex candle charts for accurate analysis</li>
+                <li>Portfolio of recent profits with screenshots</li>
+                <li>Membership plans for personalized trading strategies</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="charts">
+        <div class="container">
+            <h2>Live Forex Candle Chart</h2>
+            <canvas id="forexChart" width="400" height="200"></canvas>
+        </div>
+        <script>
+            const ctx = document.getElementById('forexChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Profit Trend',
+                        data: [120, 190, 300, 500, 200, 300],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                }
+            });
+        </script>
+    </section>
+
+    <section id="profits">
+        <div class="container">
+            <h2>Recent Profits</h2>
+            <div class="gallery">
+                <img src="screenshot1.jpg" alt="Profit Screenshot 1">
+                <img src="screenshot2.jpg" alt="Profit Screenshot 2">
+                <img src="screenshot3.jpg" alt="Profit Screenshot 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="membership">
+        <div class="container">
+            <h2>Membership Plans</h2>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Basic</h3>
+                    <p>Access to daily forex updates and charts.</p>
+                    <p>Price: $50/month</p>
+                </div>
+                <div class="plan">
+                    <h3>Pro</h3>
+                    <p>Includes Basic features + one-on-one consultation.</p>
+                    <p>Price: $100/month</p>
+                </div>
+                <div class="plan">
+                    <h3>Premium</h3>
+                    <p>All features + personalized trading strategies.</p>
+                    <p>Price: $200/month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Anas Ali Trading. All rights reserved.</p>
+            <p>Visit us at: <a href="https://anasalipanel.com">anasalipanel.com</a></p>
+            <p>Follow us on: 
+                <a href="#">Twitter</a> | 
+                <a href="#">LinkedIn</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

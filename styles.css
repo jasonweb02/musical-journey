@@ -1,155 +1,159 @@
-/* General Reset */
-* {
+/* Importing stylish font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-/* Header Styling */
-header {
-    background-color: #002244;
-    color: #fff;
-    padding: 20px 10%;
-}
-
+/* Header styling */
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-family: 'Poppins', sans-serif; /* Apply the stylish font */
+    font-size: 60px; /* Make the font large */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 255, 255, 0.2); /* 3D effect */
+    color: #3498db; /* Stylish color */
+    font-weight: bold; /* Make it bold */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 3px; /* Space out letters */
+    margin: 20px 0; /* Adjust margin */
+    text-align: center; /* Center align the header */
+}
+
+/* Header container and navigation styling */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 header nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #ffd700;
-    font-weight: bold;
-    font-size: 1.2em;
+    font-size: 16px;
 }
 
-/* Container for Sections */
-.container {
-    padding: 20px 10%;
+header nav ul li a:hover {
+    color: #3498db;
 }
 
-/* Section Titles */
-h2 {
-    color: #002244;
-    font-size: 2em;
-    margin-bottom: 15px;
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* Features Section */
-ul {
-    list-style: square;
-    margin-left: 20px;
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-/* Plan Styles */
+section p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Gallery for profit screenshots */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Membership Plans Section */
 .plans {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 .plan {
-    border: 2px solid #002244;
+    background-color: #fff;
+    padding: 30px;
     border-radius: 8px;
-    padding: 20px;
-    background-color: #ffd700;
-    color: #002244;
-    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s;
+    width: 250px;
 }
 
-.plan:hover {
-    transform: scale(1.05);
+.plan h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* Contact Form */
-form input, form textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.plan p {
+    font-size: 18px;
+    color: #555;
 }
 
-form button {
-    background-color: #002244;
-    color: #ffd700;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #ffd700;
-    color: #002244;
+.plan p.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3498db;
 }
 
 /* Footer Styling */
 footer {
-    background-color: #002244;
-    color: #fff;
-    text-align: center;
+    background-color: #333;
+    color: white;
     padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
 }
 
 footer a {
-    color: #ffd700;
+    color: #3498db;
     text-decoration: none;
-    margin: 0 10px;
 }
 
-/* Gallery for Recent Profits */
-.gallery {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+footer a:hover {
+    color: #fff;
 }
 
-.gallery img {
-    width: 30%;
-    border-radius: 10px;
-    object-fit: cover;
+/* Form Styling */
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
+form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
-    header nav ul {
-        flex-direction: column;
-    }
-
-    .plans {
-        flex-direction: column;
-    }
-
-    .plan {
-        width: 100%;
-    }
-
-    .gallery img {
-        width: 100%;
-    }
+form button:hover {
+    background-color: #2980b9;
 }

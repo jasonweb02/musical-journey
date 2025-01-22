@@ -1,156 +1,54 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-}
-
-/* Header Styles */
-header {
-    background-color: #003366;
-    color: white;
-    padding: 20px 0;
+/* Base Styles for About Us Section */
+.section-container {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-header h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #fff;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #00ccff;
-}
-
-.cta-btn {
-    padding: 10px 30px;
-    background-color: #00ccff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-    background-color: #0088cc;
-}
-
-/* Section Styles */
-.section-container {
-    padding: 60px 0;
-    text-align: center;
-}
-
 .section-title {
-    font-size: 2.5em;
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 20px;
-    color: #003366;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Features Section */
-.feature-list {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.feature-item {
-    width: 23%;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-10px);
-}
-
-.feature-item h3 {
-    font-size: 1.8em;
-    color: #003366;
-}
-
-.feature-item p {
-    font-size: 1.1em;
+.container p {
+    font-size: 1rem;
+    line-height: 1.6;
     color: #555;
+    margin-bottom: 15px;
 }
 
-/* Profits Section */
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .container p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .section-container {
+        padding: 30px 15px;
+    }
 }
 
-.gallery img {
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.2rem;
+    }
 
-/* Plans Section */
-.plans {
-    display: flex;
-    justify-content: space-around;
-}
+    .container p {
+        font-size: 0.8rem;
+    }
 
-.plan {
-    width: 30%;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
+    .section-container {
+        padding: 20px 10px;
+    }
 }
-
-.plan h3 {
-    font-size: 1.8em;
-    color: #003366;
-}
-
-.plan p {
-    font-size: 1.2em;
-}
-
-/* Contact Section */
-form {
-    display: flex;
-   

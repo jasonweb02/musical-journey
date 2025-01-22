@@ -12,12 +12,12 @@
 <body>
     <!-- Main Header Section -->
     <header>
-        <img src="images/homepage_banner_anas_ali.jpg" alt="Anas Ali Trading Banner" class="header-image">
+        <img src="images/banner01.jpg" alt="Anas Ali Trading Banner" class="header-image">
     </header>
 
     <!-- Banner Section -->
     <header id="banner">
-        <img src="images/Homepage_banner_anas_ali.jpg" alt="Anas Ali Trading Banner" class="banner-image">
+        <img src="images/banner01.jpg" alt="Anas Ali Trading Banner" class="banner-image">
     </header>
 
     <header>
@@ -128,4 +128,65 @@
                 if (range === 'daily') {
                     chart.data.labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
                     chart.data.datasets[0].data = [100, 200, 300, 400, 500];
-                    chart.data.datasets[1].data = [10, 20, 30, 40, 5
+                    chart.data.datasets[1].data = [10, 20, 30, 40, 50];
+                } else if (range === 'monthly') {
+                    chart.data.labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+                    chart.data.datasets[0].data = [500, 700, 800, 1200, 1500, 1700];
+                    chart.data.datasets[1].data = [100, 120, 90, 80, 70, 60];
+                } else if (range === 'yearly') {
+                    chart.data.labels = ['2021', '2022', '2023', '2024', '2025'];
+                    chart.data.datasets[0].data = [12000, 15000, 17000, 20000, 22000];
+                    chart.data.datasets[1].data = [1200, 1000, 900, 800, 700];
+                }
+                chart.update();
+            }
+        </script>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="section-container">
+        <div class="container">
+            <h2 class="section-title">Investment Plans</h2>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Basic</h3>
+                    <p>Daily updates & insights.</p>
+                    <p>Price: $50/month</p>
+                </div>
+                <div class="plan">
+                    <h3>Pro</h3>
+                    <p>Basic features + consultation.</p>
+                    <p>Price: $100/month</p>
+                </div>
+                <div class="plan">
+                    <h3>Premium</h3>
+                    <p>Pro features + strategies.</p>
+                    <p>Price: $200/month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Anas Ali Trading. All rights reserved.</p>
+            <p>Visit us: <a href="https://anasalipanel.com">anasalipanel.com</a></p>
+            <p>Follow us: <a href="#">Twitter</a> | <a href="#">LinkedIn</a> | <a href="#">Instagram</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

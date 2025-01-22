@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maximize your forex trading profits with Anas Ali Trading. Join us for expert strategies and data-driven insights.">
-    <meta name="keywords" content="forex trading, investment, profit, forex charts">
-    <meta name="author" content="Anas Ali Trading">
     <title>Anas Ali Trading</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
 </head>
 
 <body>
@@ -18,7 +14,7 @@
         <div class="header-container">
             <h1 class="logo">Anas Ali Trading</h1>
             <nav>
-                <ul class="nav-links" id="nav-links">
+                <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#charts">Charts</a></li>
@@ -26,21 +22,21 @@
                     <li><a href="#membership">Membership</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="hamburger" id="hamburger">&#9776;</button>
             </nav>
             <button class="cta-btn">Get Started</button>
         </div>
     </header>
 
-    <section id="about" class="section-container fade-in">
+    <section id="about" class="section-container">
         <div class="container">
             <h2 class="section-title">About Us</h2>
-            <p>Welcome to Anas Ali Trading, where we help you maximize your profits in the dynamic world of forex trading. Our team of experienced traders, with years of expertise in global financial markets, is dedicated to providing you with cutting-edge strategies, real-time data, and personalized support to help you make smarter investment decisions.</p>
-            <p>Join us today to start your journey towards financial success, and let us guide you to make smarter trading decisions. Start with our exclusive membership plans, and access personalized trading strategies that suit your needs.</p>
+            <p>Welcome to Anas Ali Trading, where we help you maximize your profits in the dynamic world of forex trading.</p>
+            <p>We focus on empowering clients with cutting-edge strategies, real-time data, and personalized support.</p>
+            <p>Join us today and start your journey toward financial success.</p>
         </div>
     </section>
 
-    <section id="features" class="section-container fade-in">
+    <section id="features" class="section-container">
         <div class="container">
             <h2 class="section-title">Features</h2>
             <div class="feature-list">
@@ -54,64 +50,57 @@
                 </div>
                 <div class="feature-item">
                     <h3>Portfolio & Profits</h3>
-                    <p>View your growth through detailed reports and screenshots.</p>
+                    <p>View your growth through detailed reports.</p>
                 </div>
                 <div class="feature-item">
                     <h3>Membership Plans</h3>
-                    <p>Access personalized trading strategies through membership.</p>
+                    <p>Access personalized trading strategies.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="charts" class="section-container fade-in">
+    <section id="charts" class="section-container">
         <div class="container">
-            <h2 class="section-title">Live Forex Candle Chart</h2>
-            <div style="height: 300px; width: 100%;">
-                <canvas id="forexChart"></canvas>
+            <h2 class="section-title">Client Profit Trends</h2>
+            <div class="chart-filters">
+                <button onclick="updateChart('daily')">Daily</button>
+                <button onclick="updateChart('monthly')">Monthly</button>
+                <button onclick="updateChart('yearly')">Yearly</button>
             </div>
+            <canvas id="profitChart" width="400" height="200"></canvas>
         </div>
         <script>
-            const ctx = document.getElementById('forexChart').getContext('2d');
-            new Chart(ctx, {
+            const ctx = document.getElementById('profitChart').getContext('2d');
+            const chart = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
                     datasets: [{
-                        label: 'Profit Trend',
-                        data: [120, 190, 300, 500, 200, 300],
-                        borderColor: 'rgba(0, 204, 255, 1)',
-                        borderWidth: 3,
-                        pointBackgroundColor: 'rgba(0, 204, 255, 1)', 
-                        pointRadius: 6,
+                        label: 'Profits',
+                        data: [500, 700, 800, 1200, 1500, 1700],
+                        borderColor: 'rgba(0, 204, 0, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(0, 204, 0, 1)',
                         fill: true,
-                        backgroundColor: 'rgba(0, 204, 255, 0.2)',
+                        backgroundColor: 'rgba(0, 204, 0, 0.2)',
+                        tension: 0.4
+                    }, {
+                        label: 'Losses',
+                        data: [100, 120, 90, 80, 70, 60],
+                        borderColor: 'rgba(204, 0, 0, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(204, 0, 0, 1)',
+                        fill: true,
+                        backgroundColor: 'rgba(204, 0, 0, 0.2)',
                         tension: 0.4
                     }]
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        zoom: {
-                            pan: {
-                                enabled: true,
-                                mode: 'x',
-                            },
-                            zoom: {
-                                wheel: {
-                                    enabled: true,
-                                },
-                                mode: 'x',
-                            },
-                        },
-                    },
                     scales: {
                         y: {
                             beginAtZero: true,
-                            grid: {
-                                color: 'rgba(200, 200, 200, 0.2)',
-                            },
                         },
                         x: {
                             grid: {
@@ -121,33 +110,68 @@
                     }
                 }
             });
+
+            function updateChart(range) {
+                if (range === 'daily') {
+                    chart.data.labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+                    chart.data.datasets[0].data = [100, 200, 300, 400, 500];
+                    chart.data.datasets[1].data = [10, 20, 30, 40, 50];
+                } else if (range === 'monthly') {
+                    chart.data.labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+                    chart.data.datasets[0].data = [500, 700, 800, 1200, 1500, 1700];
+                    chart.data.datasets[1].data = [100, 120, 90, 80, 70, 60];
+                } else if (range === 'yearly') {
+                    chart.data.labels = ['2021', '2022', '2023', '2024', '2025'];
+                    chart.data.datasets[0].data = [12000, 15000, 17000, 20000, 22000];
+                    chart.data.datasets[1].data = [1200, 1000, 900, 800, 700];
+                }
+                chart.update();
+            }
         </script>
     </section>
 
-    <section id="profits" class="section-container fade-in">
+    <section id="membership" class="section-container">
         <div class="container">
-            <h2 class="section-title">Recent Profits</h2>
-            <div class="gallery">
-                <img src="screenshot1.jpg" alt="Profit Screenshot 1" loading="lazy">
-                <img src="screenshot2.jpg" alt="Profit Screenshot 2" loading="lazy">
-                <img src="screenshot3.jpg" alt="Profit Screenshot 3" loading="lazy">
+            <h2 class="section-title">Investment Plans</h2>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Basic</h3>
+                    <p>Daily updates & insights.</p>
+                    <p>Price: $50/month</p>
+                </div>
+                <div class="plan">
+                    <h3>Pro</h3>
+                    <p>Basic features + consultation.</p>
+                    <p>Price: $100/month</p>
+                </div>
+                <div class="plan">
+                    <h3>Premium</h3>
+                    <p>Pro features + strategies.</p>
+                    <p>Price: $200/month</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-container">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-btn">Submit</button>
+            </form>
         </div>
     </section>
 
     <footer>
         <div class="footer-container">
             <p>&copy; 2025 Anas Ali Trading. All rights reserved.</p>
+            <p>Visit us: <a href="https://anasalipanel.com">anasalipanel.com</a></p>
+            <p>Follow us: <a href="#">Twitter</a> | <a href="#">LinkedIn</a> | <a href="#">Instagram</a></p>
         </div>
     </footer>
-
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-    </script>
 </body>
 
 </html>

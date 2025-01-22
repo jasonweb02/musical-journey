@@ -216,3 +216,34 @@ footer p {
     margin: 5px 0;
     letter-spacing: 1px;
 }
+
+/* Styling for the Live Forex Candle Chart Section */
+#charts {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+#charts h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+#forexChart {
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    max-width: 100%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+#forexChart:hover {
+    transform: scale(1.05);
+}

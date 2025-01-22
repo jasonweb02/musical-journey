@@ -31,6 +31,11 @@ header {
     flex-wrap: wrap;
 }
 
+.header-image {
+    max-width: 100px; /* Adjust size of the logo */
+    margin-right: 20px;
+}
+
 .logo {
     font-size: 2rem;
     font-weight: bold;
@@ -224,6 +229,10 @@ footer a:hover {
     .header-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .header-image {
+        margin-bottom: 20px;
     }
 
     .nav-links {

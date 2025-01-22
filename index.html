@@ -12,9 +12,9 @@
 <body>
     <header>
         <div class="header-container">
-            <h1>Anas Ali Trading</h1>
+            <h1 class="logo">Anas Ali Trading</h1>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#charts">Charts</a></li>
@@ -23,31 +23,44 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="cta-btn">Get Started</button>
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="section-container">
         <div class="container">
-            <h2>About Us</h2>
+            <h2 class="section-title">About Us</h2>
             <p>At Anas Ali Trading, we help clients maximize their profits in the forex market. With expert strategies and proven methods, you can achieve consistent growth. Join us today to start trading smarter!</p>
         </div>
     </section>
 
-    <section id="features">
+    <section id="features" class="section-container">
         <div class="container">
-            <h2>Features</h2>
-            <ul>
-                <li>Secure investments via Trust Wallet</li>
-                <li>Live forex candle charts for accurate analysis</li>
-                <li>Portfolio of recent profits with screenshots</li>
-                <li>Membership plans for personalized trading strategies</li>
-            </ul>
+            <h2 class="section-title">Features</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Secure Investments</h3>
+                    <p>Invest through Trust Wallet with confidence.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Live Forex Candle Charts</h3>
+                    <p>Analyze market trends with real-time charts.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Portfolio & Profits</h3>
+                    <p>View your growth through detailed reports and screenshots.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Membership Plans</h3>
+                    <p>Access personalized trading strategies through membership.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="charts">
+    <section id="charts" class="section-container">
         <div class="container">
-            <h2>Live Forex Candle Chart</h2>
+            <h2 class="section-title">Live Forex Candle Chart</h2>
             <canvas id="forexChart" width="400" height="200"></canvas>
         </div>
         <script>
@@ -59,13 +72,13 @@
                     datasets: [{
                         label: 'Profit Trend',
                         data: [120, 190, 300, 500, 200, 300],
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 2,
-                        pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Highlight points
-                        pointRadius: 5,
-                        tension: 0.4, // Smoother line curves
+                        borderColor: 'rgba(0, 204, 255, 1)',
+                        borderWidth: 3,
+                        pointBackgroundColor: 'rgba(0, 204, 255, 1)', 
+                        pointRadius: 6,
                         fill: true,
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)', // Gradient fill
+                        backgroundColor: 'rgba(0, 204, 255, 0.2)',
+                        tension: 0.4
                     }]
                 },
                 options: {
@@ -74,36 +87,23 @@
                         y: {
                             beginAtZero: true,
                             grid: {
-                                color: 'rgba(200, 200, 200, 0.2)', // Light grid lines for better visuals
-                            },
-                            ticks: {
-                                color: '#333', // Ticks color
+                                color: 'rgba(200, 200, 200, 0.2)',
                             },
                         },
                         x: {
                             grid: {
-                                color: 'rgba(200, 200, 200, 0.2)', // Light grid lines
-                            },
-                            ticks: {
-                                color: '#333', // Ticks color
+                                color: 'rgba(200, 200, 200, 0.2)',
                             },
                         },
-                    },
-                    plugins: {
-                        legend: {
-                            labels: {
-                                color: '#333', // Legend text color
-                            }
-                        }
                     }
                 }
             });
         </script>
     </section>
 
-    <section id="profits">
+    <section id="profits" class="section-container">
         <div class="container">
-            <h2>Recent Profits</h2>
+            <h2 class="section-title">Recent Profits</h2>
             <div class="gallery">
                 <img src="screenshot1.jpg" alt="Profit Screenshot 1">
                 <img src="screenshot2.jpg" alt="Profit Screenshot 2">
@@ -112,9 +112,9 @@
         </div>
     </section>
 
-    <section id="membership">
+    <section id="membership" class="section-container">
         <div class="container">
-            <h2>Membership Plans</h2>
+            <h2 class="section-title">Membership Plans</h2>
             <div class="plans">
                 <div class="plan">
                     <h3>Basic</h3>
@@ -135,14 +135,14 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section-container">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2 class="section-title">Contact Us</h2>
             <form action="#" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit" class="cta-btn">Submit</button>
             </form>
         </div>
     </section>

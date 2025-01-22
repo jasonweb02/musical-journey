@@ -22,23 +22,20 @@ header {
     color: #fff;
     padding: 20px 0;
 }
+
 /* Style for header image */
 .header-image {
     width: 100%;   /* Makes the image fill the width of the screen */
     height: auto;  /* Keeps the aspect ratio of the image */
 }
 
+/* Header container styles */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     flex-wrap: wrap;
-}
-
-.header-image {
-    max-width: 100px; /* Adjust size of the logo */
-    margin-right: 20px;
 }
 
 .logo {

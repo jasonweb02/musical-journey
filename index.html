@@ -1,118 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anas Ali Trading</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Your Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Main Header Section -->
-    <header id="main-header">
-        <img src="images/banner01.jpg" alt="Anas Ali Trading Banner" class="header-image">
-        <div class="header-overlay">
-            <h1 class="header-title">Anas Ali Trading</h1>
-            <p class="header-subtitle">Empowering You in the World of Forex Trading</p>
-            <button class="cta-btn" onclick="window.location.href='#membership';">Join Now</button>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Your Logo</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Plans</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="banner" class="banner-image">
+            <img src="banner-image.jpg" alt="Banner Image">
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#charts">Charts</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#membership">Membership</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Us Section -->
-    <section id="about" class="section-container">
+    <div class="section-container">
         <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p>Welcome to Anas Ali Trading, where we help you maximize your profits in the dynamic world of forex trading.</p>
-            <p>We focus on empowering clients with cutting-edge strategies, real-time data, and personalized support.</p>
-            <p>Join us today and start your journey toward financial success.</p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="section-container">
-        <div class="container">
-            <h2 class="section-title">Features</h2>
+            <h2 class="section-title">Our Features</h2>
             <div class="feature-list">
                 <div class="feature-item">
-                    <h3>Secure Investments</h3>
-                    <p>Invest through Trust Wallet with confidence.</p>
+                    <h3>Feature 1</h3>
+                    <p>Description of feature 1.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Live Forex Candle Charts</h3>
-                    <p>Analyze market trends with real-time charts.</p>
+                    <h3>Feature 2</h3>
+                    <p>Description of feature 2.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Portfolio & Profits</h3>
-                    <p>View your growth through detailed reports.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Membership Plans</h3>
-                    <p>Access personalized trading strategies.</p>
+                    <h3>Feature 3</h3>
+                    <p>Description of feature 3.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="section-container">
+    <div class="gallery-section">
         <div class="container">
-            <h2 class="section-title">Image Gallery</h2>
+            <h2 class="section-title">Gallery</h2>
             <div class="gallery">
-                <img src="images/dollarforex.jpg" alt="Dollar Forex">
-                <img src="images/every trade.jpg" alt="Every Trade">
-                <img src="images/goodmoney.jpg" alt="Good Money">
-                <img src="images/show trade.jpg" alt="Show Trade">
-                <img src="images/trade with me.jpg" alt="Trade With Me">
-                <img src="images/web595.jpg" alt="Web 595">
-                <img src="images/webpageaj.jpg" alt="Web Page AJ">
-                <img src="images/winwin.jpg" alt="Win-Win">
-            </div>
-            <div class="quotes">
-                <h3>Inspirational Quotes</h3>
-                <ul>
-                    <li>"Success in trading comes from discipline and patience."</li>
-                    <li>"The forex market rewards those who plan, not those who gamble."</li>
-                    <li>"A loss is not a failure; it's a lesson."</li>
-                    <li>"Trade with your head, not your emotions."</li>
-                    <li>"Profits are the result of consistency, not luck."</li>
-                    <li>"In trading, knowledge truly is power."</li>
-                    <li>"Diversify your trades; don't put all your eggs in one basket."</li>
-                    <li>"The best traders never stop learning."</li>
-                    <li>"Risk management is the cornerstone of profitable trading."</li>
-                    <li>"Trade what you see, not what you think."</li>
-                    <li>"A small profit is better than a big loss."</li>
-                    <li>"Your trading plan is your roadmap to success."</li>
-                    <li>"Be humble in wins and calm in losses."</li>
-                    <li>"The forex market is always teaching; be ready to learn."</li>
-                    <li>"Fortune favors the disciplined trader."</li>
-                    <li>"Success is built on a foundation of small, consistent steps."</li>
-                    <li>"Never chase the market; let the trades come to you."</li>
-                    <li>"In trading, patience often beats speed."</li>
-                    <li>"Control your risk, and the profits will follow."</li>
-                    <li>"The market rewards preparation, not impulse."</li>
-                </ul>
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Image 1">
+                    <p class="quote">"This is a great image!"</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image2.jpg" alt="Image 2">
+                    <p class="quote">"Another amazing shot!"</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="image3.jpg" alt="Image 3">
+                    <p class="quote">"Simply beautiful!"</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Remaining Sections -->
-    <!-- (Charts, Membership, Contact, Footer) -->
-    <!-- These sections remain unchanged and are not shown here for brevity -->
+    <div class="section-container">
+        <div class="container">
+            <h2 class="section-title">Membership Plans</h2>
+            <div class="plans">
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <p>Details about the basic plan.</p>
+                </div>
+                <div class="plan">
+                    <h3>Standard Plan</h3>
+                    <p>Details about the standard plan.</p>
+                </div>
+                <div class="plan">
+                    <h3>Premium Plan</h3>
+                    <p>Details about the premium plan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</body>
-
-</html>
+    <!-- Contact Section -->
+    <div class="section-container">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" requir
